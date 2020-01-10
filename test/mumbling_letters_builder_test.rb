@@ -11,6 +11,10 @@ class MumblingLettersBuilderTest < Test::Unit::TestCase
     assert_equal 'A', MumblingLettersBuilder.new('a').build
   end
 
+  def test_works_also_with_numbers
+    assert_equal '1-22', MumblingLettersBuilder.new('12').build
+  end
+
   def test_multiple_chars_string
     assert_equal 'A-Bb-Ccc', MumblingLettersBuilder.new('abc').build
   end
